@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the compiled .jar file from your local machine to the container
-COPY target/MedilockerBackend.jar app.jar
+COPY target/MedilockerBackend.jar MedilockerBackend.jar
 
 # Expose the port your Spring Boot app will run on (default is 8080)
 EXPOSE 8080
 
 # Define the command to run your application
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/MedilockerBackend.jar"]
