@@ -2,7 +2,7 @@
 FROM openjdk:17-jdk-slim
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR /Medilocker
 
 # Copy the compiled .jar file from your local machine to the container
 COPY target/MedilockerBackend.jar MedilockerBackend.jar
@@ -11,4 +11,4 @@ COPY target/MedilockerBackend.jar MedilockerBackend.jar
 EXPOSE 8080
 
 # Define the command to run your application
-ENTRYPOINT ["java", "-jar", "/app/MedilockerBackend.jar"]
+ENTRYPOINT ["java", "-jar", "/Medilocker/MedilockerBackend.jar"]
